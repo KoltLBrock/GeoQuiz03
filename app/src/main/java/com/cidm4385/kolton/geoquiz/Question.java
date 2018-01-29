@@ -7,12 +7,19 @@ package com.cidm4385.kolton.geoquiz;
 public class Question {
     private int mTextResId;
     private boolean mAnswerTrue;
+    private int mAnswered;
 
     public Question(int textResId, boolean answerTrue){
         mTextResId = textResId;
         mAnswerTrue = answerTrue;
+        mAnswered = 0;
     }
-
+    public void setAnswered(int answered) {
+        mAnswered = answered;
+    }
+    public int isAnswered() {
+        return mAnswered;
+    }
     public int getTextResId() {
         return mTextResId;
     }
